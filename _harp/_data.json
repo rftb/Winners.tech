@@ -1,0 +1,16 @@
+{
+  "timeline": [
+    {
+      "stamp": "Overview",
+      "links": {
+        "> Outline": "outline.html"
+      }
+    }
+  , {
+      "stamp": "Winners Page",
+      "links": {
+        "> Map": "map.html"
+      }
+    }
+  ]
+}

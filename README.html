@@ -1,0 +1,76 @@
+<h1>Project Hub + Harp</h1>
+<p><strong>A Harp Boilerplate for Brad Frost’s <a href="https://github.com/bradfrost/project-hub">Project Hub</a> HTML template</strong></p>
+<p>Read more about <a href="http://24ways.org/2013/project-hubs/">project hubs on 24 Ways.</a></p>
+<p>This is an HTML template for online project timelines (also known as &quot;project hubs&quot;).</p>
+<h2>What is a project hub and why would I use one?</h2>
+<p>A project hub is a tool for keeping track of the progress of a design project. The hub lives online (either publically available or password protected), so that everyone involved in the team has access to it.</p>
+<p>The benefits of using a project hub:
+- Serves as a centralized place for the project&#39;s key design/development materials
+- Easily and visually view project progress
+- Provides an archive for project artifacts
+- Keep clients and team members up to speed with design progress
+- Lives at a URL that doesn&#39;t change</p>
+<h2>Resources</h2>
+<ul>
+<li><a href="https://github.com/bradfrost/project-hub">Original HTML Template</a></li>
+<li><a href="http://24ways.org/2013/project-hubs/">Overview of project hubs on 24 Ways.</a></li>
+<li><a href="http://harpjs.com/docs/quick-start">Getting Started with Harp</a></li>
+</ul>
+<h2>Getting started</h2>
+<p>1) Install Harp in your computer</p>
+<pre><code>$ sudo npm install -g harp</code></pre>
+<p>2) Clone this repository</p>
+<pre><code>$ git clone git@github.com:jorgepedret/harp-project-hub.git</code></pre>
+<p>3) Start Harp server</p>
+<pre><code>$ harp server harp-project-hub --port 9966</code></pre>
+<p>4) Visit <a href="http://localhost:9966/"><a href="http://localhost:9966/">http://localhost:9966/</a></a> in your browser and follow the instructions in the page</p>
+<h2>How to add new events to the timeline</h2>
+<p>After you rename <code>_data-sample.json</code> to <code>_data.json</code>, the data structure is fairly simple to understand.</p>
+<ol>
+<li>Open your <code>_data.json</code> file</li>
+<li>Add a new item to the <code>timeline</code> container</li>
+</ol>
+<pre><code>{
+  &quot;timeline&quot;: [
+    {
+      &quot;stamp&quot;: &quot;August 9th, 2013&quot;,
+      &quot;content&quot;: &quot;Sign contract&quot;,
+      &quot;links&quot;: {
+        &quot;View contract&quot;: &quot;#&quot;
+      }
+    }
+  ]
+}</code></pre>
+<p>If you wanna add a new one, simply append it to the top, like this:</p>
+<pre><code>{
+  &quot;timeline&quot;: [
+    {
+      &quot;stamp&quot;: &quot;August 14th, 2013&quot;,
+      &quot;content&quot;: &quot;Kickoff Meeting&quot;,
+      &quot;links&quot;: {
+        &quot;View notes&quot;: &quot;#&quot;,
+        &quot;View demo&quot;: &quot;#&quot;
+      }
+    },
+    {
+      &quot;stamp&quot;: &quot;August 9th, 2013&quot;,
+      &quot;content&quot;: &quot;Sign contract&quot;,
+      &quot;links&quot;: {
+        &quot;View contract&quot;: &quot;#&quot;
+      }
+    }
+  ]
+}</code></pre>
+<blockquote>
+<p>Tip: Comas and quotes are important when writing JSON. Follow the same structure as the sample data to avoid syntax issues.</p>
+</blockquote>
+<h2>Publishing &amp; Deploying</h2>
+<p>To convert your timeline project to HTML, JS and CSS, run <code>harp compile</code> from the command line and a <code>www</code> directory will be created with all your files contained inside it, which you can publish anywhere.</p>
+<p>Here are some popular deploying options:</p>
+<ul>
+<li><a href="http://harpjs.com/docs/deployment/harp-platform">Deploying using the Harp Platform</a></li>
+<li><a href="http://harpjs.com/docs/deployment/github-pages">Deploying to GitHub Pages</a></li>
+<li><a href="http://harpjs.com/docs/deployment/heroku">Deploying to Heroku</a></li>
+</ul>
+<h2>License</h2>
+<p>MIT</p>
